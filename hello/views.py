@@ -23,3 +23,18 @@ def booklist(request):
 
     books = Books.objects.all()
     return render(request, "booklist.html", {"books": books})
+
+def createbook(request):
+
+    return render(request, "createbook.html")
+
+def insertbook(request):
+
+    booktitle = request.POST.get('booktitle')
+
+    book = Books(title=booktitle)
+    book.save()
+    books = Books.objects.all()
+    return render(request, "booklist.html", {"books": books})
+
+

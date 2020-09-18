@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+
+
+      <h2>Create a Book entry</h2>
+    <form action="{% url 'insertbook'%}" method="post">
+        {% csrf_token %}
+    <input type="text" name="booktitle" id="booktitle" value="Enter">
+
+<input type="submit" value="Create">
+</form>
+
+</div>
+
+{% endblock %}

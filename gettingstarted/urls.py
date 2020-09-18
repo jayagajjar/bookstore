@@ -17,6 +17,8 @@ import hello.views
 urlpatterns = [
     path("", hello.views.index, name="index"),
     path("db/", hello.views.db, name="db"),
+    path("createbook/", hello.views.createbook, name="createbook"),
+    path("insertbook/", hello.views.insertbook, name="insertbook"),
     path("booklist/", hello.views.booklist, name="booklist"),
     path("admin/", admin.site.urls),
 ]

@@ -4,7 +4,7 @@ from django.contrib import admin
 
 admin.autodiscover()
 
-import hello.views
+import bookstore.views
 
 # To add a new path, first import the app:
 # import blog
@@ -15,10 +15,10 @@ import hello.views
 # Learn more here: https://docs.djangoproject.com/en/2.1/topics/http/urls/
 
 urlpatterns = [
-    path("", hello.views.index, name="index"),
-    path("db/", hello.views.db, name="db"),
-    path("createbook/", hello.views.createbook, name="createbook"),
-    path("insertbook/", hello.views.insertbook, name="insertbook"),
-    path("booklist/", hello.views.booklist, name="booklist"),
+    path("", bookstore.views.index, name="index"),
+    path("db/", bookstore.views.db, name="db"),
+    path("createbook/", bookstore.views.createbook, name="createbook"),
+    path("insertbook/", bookstore.views.insertbook, name="insertbook"),
+    path("booklist/", bookstore.views.booklist, name="booklist"),
     path("admin/", admin.site.urls),
 ]

@@ -31,7 +31,6 @@ def createbook(request):
 def insertbook(request):
 
     booktitle = request.POST.get('booktitle')
-
     book = Books(title=booktitle)
     book.save()
     books = Books.objects.all()

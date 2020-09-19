@@ -7,16 +7,16 @@
   <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <style type="text/css">
     .jumbotron {
-        background: #532f8c;
+        background: #0f4c75;
         color: white;
         padding-bottom: 80px
     }
     .jumbotron .btn-primary {
-        background: #845ac7;
-        border-color: #845ac7
+        background: #3282b8;
+        border-color: #1e5f74
     }
     .jumbotron .btn-primary:hover {
-        background: #7646c1
+        background: #4d8db8
     }
     .jumbotron p {
         color: #d9ccee;
@@ -44,17 +44,21 @@
   </style>
 </head>
 <body>
-<nav class="navbar navbar-default navbar-static-top navbar-inverse">
-  <div class="container">
-    <ul class="nav navbar-nav">
+<nav class="navbar navbar-default navbar-static-top navbar-inverse" style="background:#1b262c">
+  <div class="container" >
+    <ul class="nav navbar-nav" >
       <li class="active">
         <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
       </li>
+      <li >
+        <a href="/createbook"><span class="glyphicon glyphicon-plus"></span> Add Book</a>
+      </li>
       <li>
-        <a href="booklist"><span class="glyphicon glyphicon-user"></span> Book List</a>
+        <a href="/booklist"><span class="glyphicon glyphicon-list-alt"></span> Book List</a>
       </li>
     </ul>
   </div>
+
 </nav>
 
 {% block content %}{% endblock %}

@@ -19,6 +19,7 @@ urlpatterns = [
     path("db/", bookstore.views.db, name="db"),
     path("createbook/", bookstore.views.createbook, name="createbook"),
     path("insertbook/", bookstore.views.insertbook, name="insertbook"),
+    path("deletebook/", bookstore.views.deletebook, name="deletebook"),
     path("booklist/", bookstore.views.booklist, name="booklist"),
     path("admin/", admin.site.urls),
 ]

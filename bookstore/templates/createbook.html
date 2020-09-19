@@ -2,10 +2,13 @@
 {% load static %}
 
 {% block content %}
-  <div class="container">
+
+
+  <div class="container" >
 
 
       <h2>Create a Book entry</h2>
+      <h6>The new book entry will store the image name (booktitle without space) in the database, therefore to view the books with images please enter any of the following books [1984, Atlas Shrugged, Diary of a Wimpy Kid, Girrafe Cant Dance, goodnight Moon, Quiet, the Alchemist, The Brief History of Time, The Fountainhead, The Most Magnificent Things]</h6>
     <form action="{% url 'insertbook'%}" method="post">
         {% csrf_token %}
     <input type="text" name="booktitle" id="booktitle" value="Enter">

@@ -12,7 +12,17 @@
     <br/>
       <form action="{% url 'insertbook'%}" method="post" >
         {% csrf_token %}
-    <input type="text" name="booktitle" id="booktitle" value="Enter">
+    Title: <input type="text" name="booktitle" id="booktitle" value="">
+          Author: <input type="text" name="bookauthor" id="bookauthor" value="">
+          <label for="bookrating">Rating:</label>
+
+<select name="bookrating" id="bookrating">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+    <option value="5">5</option>
+</select>
 
 <input type="submit" value="Create">
 </form>

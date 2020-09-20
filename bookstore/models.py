@@ -7,6 +7,8 @@ class Greeting(models.Model):
 
 class Books(models.Model):
     title = models.CharField(max_length=200)
+    author = models.CharField(max_length=200)
+    rating = models.CharField(max_length=2)
     img = models.CharField(max_length=200)
     id = models.AutoField(primary_key=True)
 

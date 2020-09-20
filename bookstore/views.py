@@ -32,7 +32,9 @@ def createbook(request):
 def insertbook(request):
 
     booktitle = request.POST.get('booktitle')
-    book = Books(title=booktitle,img=booktitle.replace(" ", "") .lower()+'.jpg')
+    bookauthor = request.POST.get('bookauthor')
+    bookrating = request.POST.get('bookrating')
+    book = Books(title=booktitle,author=bookauthor,rating=bookrating,img=booktitle.replace(" ", "") .lower()+'.jpg')
     book.save()
     books = Books.objects.all()
     return render(request, "booklist.html", {"books": books})

@@ -7,15 +7,26 @@
   <div class="container" >
 
 
-      <h2>Create a Book entry</h2>
-      <h6>The new book entry will store the image name (booktitle without space) in the database, therefore to view the books with images please enter any of the following books [1984, Atlas Shrugged, Diary of a Wimpy Kid, Girrafe Cant Dance, goodnight Moon, Quiet, the Alchemist, The Brief History of Time, The Fountainhead, The Most Magnificent Things]</h6>
-    <form action="{% url 'insertbook'%}" method="post">
+      <h1>Create a Book Entry</h1>
+      <h4>Following book images are already uploaded [1984, Atlas Shrugged, Diary of a Wimpy Kid, Girrafe Cant Dance, goodnight Moon, Quiet, the Alchemist, The Brief History of Time, The Fountainhead, The Most Magnificent Things]</h4>
+    <br/>
+      <form action="{% url 'insertbook'%}" method="post" >
         {% csrf_token %}
     <input type="text" name="booktitle" id="booktitle" value="Enter">
 
 <input type="submit" value="Create">
 </form>
-
+<hr/>
+<br/>
+      <br/>
+      <h1>Upload Images</h1>
+      <h4>Image name should be in lowercase and without space.</h4>
+      <br/>
+       <form action="{% url 'book_image_upload'%}" method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+           <button type="submit">Upload The Book Image</button>
+    </form>
 </div>
 
 {% endblock %}

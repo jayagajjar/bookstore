@@ -5,6 +5,9 @@ from django.contrib import admin
 admin.autodiscover()
 
 import bookstore.views
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 # To add a new path, first import the app:
 # import blog
@@ -22,4 +25,8 @@ urlpatterns = [
     path("deletebook/", bookstore.views.deletebook, name="deletebook"),
     path("booklist/", bookstore.views.booklist, name="booklist"),
     path("admin/", admin.site.urls),
+    path('book_image_upload', bookstore.views.book_image_upload, name = 'book_image_upload'),
+    path('success', bookstore.views.success, name = 'success'),
 ]
+
+

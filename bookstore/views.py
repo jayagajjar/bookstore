@@ -5,7 +5,6 @@ from django.http import HttpResponse
 
 from .models import Greeting
 from .models import Books
-from .forms import *
 
 # Create your views here.
 def index(request):
@@ -48,16 +47,16 @@ def deletebook(request):
     books = Books.objects.all()
     return render(request, "booklist.html", {"books": books})
 
-def book_image_upload(request):
-    if request.method == 'POST':
-        form = BookImageForm(request.POST, request.FILES)
-
-        if form.is_valid():
-            form.save()
-            return HttpResponse('successfully uploaded')
-    else:
-        form = BookImageForm()
-    return render(request, 'createbook.html', {'form': form})
+# def book_image_upload(request):
+#     if request.method == 'POST':
+#         form = BookImageForm(request.POST, request.FILES)
+#
+#         if form.is_valid():
+#             form.save()
+#             return HttpResponse('successfully uploaded')
+#     else:
+#         form = BookImageForm()
+#     return render(request, 'createbook.html', {'form': form})
 
 
 def success(request):

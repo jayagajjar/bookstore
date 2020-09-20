@@ -29,14 +29,7 @@
 <hr/>
 <br/>
       <br/>
-      <h1>Upload Images</h1>
-      <h4>Image name should be in lowercase and without space.</h4>
-      <br/>
-       <form action="{% url 'book_image_upload'%}" method = "post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-           <button type="submit">Upload The Book Image</button>
-    </form>
+    
 </div>
 
 {% endblock %}

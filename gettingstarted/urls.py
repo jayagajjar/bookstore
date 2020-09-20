@@ -25,8 +25,7 @@ urlpatterns = [
     path("deletebook/", bookstore.views.deletebook, name="deletebook"),
     path("booklist/", bookstore.views.booklist, name="booklist"),
     path("admin/", admin.site.urls),
-    path('book_image_upload', bookstore.views.book_image_upload, name = 'book_image_upload'),
     path('success', bookstore.views.success, name = 'success'),
 ]
-
+#path('book_image_upload', bookstore.views.book_image_upload, name = 'book_image_upload'),
 
